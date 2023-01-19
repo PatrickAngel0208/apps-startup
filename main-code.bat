@@ -19,6 +19,10 @@ if exist CMLab.bat (
 		if exist ScanManager.exe (
 			START	dokwatcher
 			START	scanmanager
+			:: service needed to track utilization - Restarting
+			taskkill /F /IM Intel.SUS.PlatformUtilization.exe
+			net stop "SUSClient"
+			net start "SUSClient"
 		)
 	) else (
 
@@ -36,6 +40,10 @@ if exist CMLab.bat (
 	copy "%source_folder%\CMLab.bat" "%dest_folder%" 
 	START	dokwatcher
 	START	scanmanager
+	:: service needed to track utilization - Restarting
+	taskkill /F /IM Intel.SUS.PlatformUtilization.exe
+	net stop "SUSClient"
+	net start "SUSClient"
 	ECHO.
 	ECHO Thank you for your patience; you are now free to remove me.
 	ECHO.
