@@ -5,7 +5,7 @@ TITLE CMLab-Tools-Starter
 set source_folder=%0
 set dest_folder=%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
 set cmlab_folder=C:\Windows\System32
-set plat_utili=C:\Intel\UTZ\SetupSUSDetectionService\Release\
+set plat_utili=C:\UTZ\SetupSUSDetectionService\Release\
 
 @REM ECHO %source_folder%
 @REM ECHO %dest_folder%
@@ -51,15 +51,15 @@ if exist "%dest_folder%\CMLab-starter.bat" (
 		PAUSE
 	)
 
-	@REM Check if Intel.SUS.PlatformUtilization.exe exists, if so, run it.
+	@REM Check if SUS.PlatformUtilization.exe exists, if so, run it.
 	if exist %plat_utili% (
 
-		if exist %plat_utili%\Intel.SUS.PlatformUtilization.exe (
-				START C:\Intel\UTZ\SetupSUSDetectionService\Release\Intel.SUS.PlatformUtilization.exe && (
-					@REM Intel.SUS.PlatformUtilization.exe starts successfully.
+		if exist %plat_utili%\SUS.PlatformUtilization.exe (
+				START C:\UTZ\SetupSUSDetectionService\Release\SUS.PlatformUtilization.exe && (
+					@REM SUS.PlatformUtilization.exe starts successfully.
 				) || (
 					ECHO ============================================================================================
-					ECHO 'Intel.SUS.PlatformUtilization.exe' is not working properly, please contact GDC CMLab Leader.
+					ECHO 'SUS.PlatformUtilization.exe' is not working properly, please contact GDC CMLab Leader.
 					ECHO Please contact to GDC CMLab Leader.
 					ECHO ============================================================================================
 					PAUSE
@@ -124,15 +124,15 @@ if exist "%dest_folder%\CMLab-starter.bat" (
 		PAUSE
 	)
 
-	@REM Check if Intel.SUS.PlatformUtilization.exe exists, if so, run it.
+	@REM Check if SUS.PlatformUtilization.exe exists, if so, run it.
 	if exist %plat_utili% (
 
-		if exist %plat_utili%\Intel.SUS.PlatformUtilization.exe (
-				START C:\Intel\UTZ\SetupSUSDetectionService\Release\Intel.SUS.PlatformUtilization.exe && (
-					@REM Intel.SUS.PlatformUtilization.exe starts successfully.
+		if exist %plat_utili%\SUS.PlatformUtilization.exe (
+				START C:\UTZ\SetupSUSDetectionService\Release\SUS.PlatformUtilization.exe && (
+					@REM SUS.PlatformUtilization.exe starts successfully.
 				) || (
 					ECHO 
-					ECHO 'Intel.SUS.PlatformUtilization.exe' is not working properly, please contact GDC CMLab Leader.
+					ECHO 'SUS.PlatformUtilization.exe' is not working properly, please contact GDC CMLab Leader.
 					ECHO Please contact to GDC CMLab Leader.
 					ECHO ============================================================================================
 					PAUSE
